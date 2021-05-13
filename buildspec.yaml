@@ -2,9 +2,9 @@ version: 0.2
  
  
 phases:
-build:
-commands:
+  build:
+    commands:
  
-#- docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise clean
-#- docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise validate
-- docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise migrate
+      #- docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise clean
+      #- docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise validate
+      - docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise migrate
