@@ -8,11 +8,11 @@ phases:
       - apt-get install unzip
       - unzip flyway-commandline-3.0.zip
       - cd flyway-3.0/
-      #- cd conf/
-      #- echo flyway.url=jdbc:mysql://172.31.21.211:3306/mtsoft1 >> flyway.properties
-      #- echo flyway.user=flyway >> flyway.properties
-      #- echo flyway.properties >> flyway.properties
-      #- flyway migrate
+      - cd conf/
+      - echo flyway.url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306/mtsoft1 >> flyway.properties
+      - echo flyway.user=flyway >> flyway.properties
+      - echo flyway.properties >> flyway.properties
+      - flyway migrate
 
 
-      - flyway -url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=admin -password=krunal123 -target=1.0.0 migrate
+      #- flyway -url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=admin -password=krunal123 -target=1.0.0 migrate
