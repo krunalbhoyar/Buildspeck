@@ -8,7 +8,7 @@ phases:
       - cd flyway-7.9.0/
       - cd conf/
       - echo flyway.url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306/database-1 >> flyway.properties
-      - echo flyway.user=flyway >> flyway.properties
+      - echo flyway.user=admin >> flyway.properties
       - echo flyway.password=krunal123 >> flyway.properties
       - flyway migrate
 
