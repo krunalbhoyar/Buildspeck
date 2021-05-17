@@ -11,7 +11,7 @@ phases:
       - cd conf/
       - echo flyway.url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306/mtsoft1 >> flyway.properties
       - echo flyway.user=flyway >> flyway.properties
-      - echo flyway.properties >> flyway.properties
+      - echo flyway.password=krunal123 >> flyway.properties
       - flyway migrate
 
 
