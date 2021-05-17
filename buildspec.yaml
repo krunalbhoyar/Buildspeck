@@ -4,7 +4,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - wget wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.9.0/flyway-commandline-7.9.0-linux-x64.tar.gz | tar xvz && sudo ln -s `pwd`/flyway-7.9.0/flyway /usr/local/bin
+      - wget wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.9.0/flyway-commandline-7.9.0-linux-x64.tar.gz | tar xvz && ln -s `pwd`/flyway-7.9.0/flyway /usr/local/bin
       - cd flyway-7.9.0/
       - cd conf/
       - echo flyway.url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306/database-1 >> flyway.properties
