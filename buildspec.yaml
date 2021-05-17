@@ -4,7 +4,15 @@ version: 0.2
 phases:
   build:
     commands:
- 
-      #- docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise clean
-      #- docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise validate
-      - docker run --rm -v $(pwd)/SQL:/flyway/SQL -v $(pwd)/conf:/flyway/conf flyway/flyway -enterprise migrate
+      - wget https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/3.0/flyway-commandline-3.0.zip
+      - apt-get install unzip
+      - unzip flyway-commandline-3.0.zip
+      - cd flyway-3.0/
+      #- cd conf/
+      #- echo flyway.url=jdbc:mysql://172.31.21.211:3306/mtsoft1 >> flyway.properties
+      #- echo flyway.user=flyway >> flyway.properties
+      #- echo flyway.properties >> flyway.properties
+      #- flyway migrate
+
+
+       - flyway-3.0/flyway -url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=admin -password=krunal123 -target=1.0.0 migrate
