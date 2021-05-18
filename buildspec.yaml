@@ -11,7 +11,7 @@ phases:
       - echo flyway.url=jdbc:mysql://mydb.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 >> flyway.conf
       - echo flyway.user=root >> flyway.conf
       - echo flyway.password=krunal123 >> flyway.conf
-      - echo flyway.schemas=schema1,schema2 >> flyway.conf
-      - cat flyway.conf
+      - echo flyway.schemas=schema2 >> flyway.conf
+      #- cat flyway.conf
       #- flyway -url=jdbc:mysql://mydb.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=root -password=krunal123 migrate
       - flyway migrate
