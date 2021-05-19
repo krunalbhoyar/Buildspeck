@@ -9,7 +9,7 @@ phases:
       - mkdir -p db/migration
       - cd conf/
       - echo > flyway.conf
-      - echo flyway.url=jdbc:mysql://dev-komplyd-cluster.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 >> flyway.conf
+      - echo flyway.url=jdbc:mysql://dev-komplyd-cluster.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306/dev-komplyd-cluster >> flyway.conf
       - echo flyway.user=krunalbhoyar >> flyway.conf
       - echo flyway.password=krunal123 >> flyway.conf
       - echo flyway.schemas=schema1 >> flyway.conf
