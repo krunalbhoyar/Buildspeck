@@ -17,3 +17,4 @@ phases:
       - cat flyway.conf
       #- flyway -url=jdbc:mysql://dev-komplyd-cluster.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=krunalbhoyar -password=krunal123 migrate
       - flyway migrate
+
