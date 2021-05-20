@@ -4,7 +4,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.9.1/flyway-commandline-7.9.1-linux-x64.tar.gz | tar xvz && sudo ln -s `pwd`/flyway-7.9.1/flyway /usr/local/bin
+      - wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.9.1/flyway-commandline-7.9.1-linux-x64.tar.gz | tar xvz && ln -s `pwd`/flyway-7.9.1/flyway /usr/local/bin
       - cd flyway-7.9.0/
       - cd conf/
       - echo >> flyway.conf
@@ -12,7 +12,6 @@ phases:
       - echo flyway.user=krunalbhoyar >> flyway.conf
       - echo flyway.password=krunal123 >> flyway.conf
       - echo flyway.schemas=schema1 >> flyway.conf
-      - echo flyway.locations=filesystem:db/migration >> flyway.conf
       - cat flyway.conf
       #- flyway -url=jdbc:mysql://dev-komplyd-cluster.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=krunalbhoyar -password=krunal123 migrate
       - flyway migrate
