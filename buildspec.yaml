@@ -4,20 +4,6 @@ version: 0.2
 phases:
   build:
     commands:
-<<<<<<< HEAD
-      - wget https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/3.0/flyway-commandline-3.0.zip
-      - apt-get install unzip
-      - unzip flyway-commandline-3.0.zip
-      - cd flyway-3.0/
-      #- cd conf/
-      #- echo flyway.url=jdbc:mysql://172.31.21.211:3306/mtsoft1 >> flyway.properties
-      #- echo flyway.user=flyway >> flyway.properties
-      #- echo flyway.properties >> flyway.properties
-      #- flyway migrate
-
-
-      - flyway -url=jdbc:mysql://database-1.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=admin -password=krunal123 -target=1.0.0 migrate
-=======
       - wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.9.1/flyway-commandline-7.9.1-linux-x64.tar.gz | tar xvz && ln -s `pwd`/flyway-7.9.1/flyway /usr/local/bin
       - cp -r migrate/* flyway-7.9.1/sql
       - ls 
@@ -33,5 +19,3 @@ phases:
       - cat flyway.conf
       #- flyway -url=jdbc:mysql://dev-komplyd-cluster.cluster-cyg6vgq6fo4r.us-east-1.rds.amazonaws.com:3306 -user=krunalbhoyar -password=krunal123 migrate
       #- flyway migrate
-
->>>>>>> 63cf23cef9851bb0dba9c6a5c1c3011e366c8472
